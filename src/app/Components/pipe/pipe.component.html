@@ -1,0 +1,23 @@
+
+<h1>{{title | titlecase}}</h1>
+<table class="table table-bordered">
+    <tr class="bg-primary">
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>DOB</th>
+        <th>Salary</th>
+        <th>Age</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name |uppercase }}</td>
+        <td>{{ user.city | lowercase}}</td>
+        <td>{{ user.dob | date:'dd/MM/yyyy' }}</td>
+        <td>{{ user.salary | currency:'INR' }}</td>
+        <td>{{ user.dob | age  }}</td>
+    </tr>
+</table>
+<pre>
+    {{users | json }}
+</pre>

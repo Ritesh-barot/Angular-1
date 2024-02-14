@@ -1,0 +1,28 @@
+<h1>Template-Driven  forms</h1>
+<form #form="ngForm" (ngSubmit)="formdata(form.value)">
+<input type="text" name="name" ngModel > <br>
+<input type="number" name="age" ngModel > <br>
+<input type="email" name="email" ngModel > <br>
+<button >register</button>
+</form>
+
+
+<div>
+    <h2>Ng Template</h2>
+    <ng-template #trv>
+        <p>This is pargraph</p>
+        <small>This is content</small>
+    </ng-template>
+    
+    <div *ngTemplateOutlet="trv"></div>
+</div>
+
+
+ <div>
+    <h2>Ng container</h2>
+    <ng-container *ngIf="toggle">
+        <p>This is toggle on</p>
+    </ng-container>
+    <button (click)="toggleClick()">Toggle</button>
+ </div>
+

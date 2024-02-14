@@ -1,0 +1,24 @@
+<h1>Validation</h1>
+
+
+<form [formGroup]="loginvalue" (ngSubmit)="logindata()">
+<input type="text" placeholder="enter name" name="name" formControlName="name">
+<span style="color: red;" *ngIf="name && name.invalid && name.touched">This field is required</span><br>
+<input type="number" placeholder="enter age" name="age" formControlName="age"><br>
+<input type="number" placeholder="enter password" name="password" formControlName="password"><br>
+<input type="email" placeholder="enter email" name="email" formControlName="email">
+<span style="color: red;" *ngIf="email && email.invalid && email.touched">not valid email</span><br><br>
+
+<button [disabled]="loginvalue.invalid">Register</button>
+</form>
+
+
+<!-- Tdf validation practise -->
+
+<!-- <form #basicform="ngForm" (ngSubmit)="logindata2(basicform.value)">
+    <input type="text" name="name" ngModel ><br>
+    <input type="age" name="age" ngModel ><br>
+    <input type="gmail" name="gmail" ngModel ><br>
+<button>ragister</button>
+
+</form> -->

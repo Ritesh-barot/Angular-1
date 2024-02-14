@@ -1,0 +1,7 @@
+<h1>Welcome TODO </h1>
+
+<input type="text" placeholder="enter task" #todo><br><br>
+<button (click)="gettodo(todo.value)">Click</button>
+<ul *ngFor="let user of list">
+    <li>{{user.name}}<button (click)="remove(user.id)">Remove</button></li>
+</ul>

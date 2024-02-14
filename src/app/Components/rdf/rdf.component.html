@@ -1,0 +1,16 @@
+
+<h1>Reactive Form</h1>
+<form [formGroup]="loginform" (ngSubmit)="logindata()">
+    <input type="text" name="name" formControlName="name"
+        placeholder="enter name"><br>
+    <input type="number" name="age" formControlName="age"
+        placeholder="enter age"><br>
+
+    <input type="email" name="email" formControlName="email"
+        placeholder="enter email"><br>
+
+    <input type="number" name="pnumber" formControlName="pnumber"
+        placeholder="enter pnumber"><br>
+
+    <button>register</button>
+</form>

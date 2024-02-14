@@ -1,0 +1,6 @@
+<h1>child component</h1>
+<p style="color: brown;">parent output is: {{data}}</p>
+
+<input type="text" name="name" placeholder="enter enything" #input><br>
+<button (click)="dataevent.emit(input.value)">Save</button>
+<!-- <ng-content></ng-content> -->

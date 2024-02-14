@@ -1,0 +1,19 @@
+<h1>parent component!</h1>
+<input type="text" name="name" placeholder="enter name" #input ><br>
+<button (click)="save(input.value)"  >save</button>
+<p style="color: green;">child output is:{{showdata}}</p>
+<h2>viewchild data from child:</h2> {{meassge}}
+
+
+<!-- below data is from child and display from parent -->
+<!-- below dataevent from child and save2 parent -->
+<app-child [data]="display" (dataevent)="save2($event)"></app-child>
+
+
+<!-- ng content -->
+<!-- <div>
+    <app-child>
+        <p>This conent is from parent use of ng content</p>
+    </app-child>
+</div> -->
+
